@@ -1,0 +1,147 @@
+From shlomif at iglu.org.il  Fri Mar 16 20:33:08 2007
+From: shlomif at iglu.org.il (Shlomi Fish)
+Date: Fri, 16 Mar 2007 21:33:08 +0200
+Subject: ClearCase does not support atomic commits
+In-Reply-To: <3db8bf0a0703161057g248187d2s412be59398e6c7d2@mail.gmail.com>
+References: <3db8bf0a0703161057g248187d2s412be59398e6c7d2@mail.gmail.com>
+Message-ID: <200703162133.08639.shlomif@iglu.org.il>
+
+Hi Amir!
+
+Please suscribe to the mailing list to send subsequent messages there as 
+messages send from non-subscribers need to be approved manually. It is very 
+low volume and you can subscribe without receiving message. I am CCing my 
+ClearCase champion.
+
+On Friday 16 March 2007, Amir Yalon wrote:
+> Hello Shlomi and mailing list readers,
+>
+> I am using ClearCase, and would be very happy to know if atomic
+> commits were part of the product. They are not.
+
+Alastair, is it true?
+
+>
+> Attached, is a patch to the Comparison ("atomic commits") which says
+> 'No. Each file is checked in seperately.' in ClearCase. I would say
+> that support for the feature is planned for future major versions, but
+> could not find any reference to confirm this. If any one finds such a
+> reference, or otherwise confirm my estimation, then you can use the
+> "future plans" patch.
+>
+
+Thanks for your contribution. I'll see what Alastair says and ammend the 
+comparison accordingly.
+
+Regards,
+
+	Shlomi Fish
+
+---------------------------------------------------------------------
+Shlomi Fish      shlomif at iglu.org.il
+Homepage:        http://www.shlomifish.org/
+
+Chuck Norris wrote a complete Perl 6 implementation in a day but then
+destroyed all evidence with his bare hands, so no one will know his secrets.
+
+
+From yxejamir at gmail.com  Sat Mar 17 00:58:59 2007
+From: yxejamir at gmail.com (Amir Yalon)
+Date: Sat, 17 Mar 2007 01:58:59 +0200
+Subject: ClearCase does not support atomic commits
+In-Reply-To: <d43d5a9b0703161455l17855effxae69fa6e32ccee8a@mail.gmail.com>
+References: <3db8bf0a0703161057g248187d2s412be59398e6c7d2@mail.gmail.com>
+	<200703162133.08639.shlomif@iglu.org.il>
+	<d43d5a9b0703161455l17855effxae69fa6e32ccee8a@mail.gmail.com>
+Message-ID: <3db8bf0a0703161658r7482a2b2v448f2f3f988de9c2@mail.gmail.com>
+
+Hi Joel,
+
+2007/3/16, Joel Crisp <jcrisp at s-r-s.co.uk>:
+>
+> Hi
+>
+> It depends on exactly what you mean by atomic commits.
+>
+> Clearcase has two main 'flavours', base Clearcase and Clearcase UCM.
+> With base clearcase all checkin/merge operations are discrete and only
+> file atomic (although there is the merge manager to help you organise
+> merging multiple files).
+>
+> With streamed development under UCM, individual files can be checked
+> in/out on a stream discretely, however delivery (merging from a
+> development stream to the mainline or another integration stream) is a
+> changeset based operation and is changeset atomic. In practice, UCM is
+> a layer on top of base clearcase and so you may find that sometimes
+> this atomicity can fail and leave a deliver operation half done. The
+> good news is this is easy for a clearcase admin to fix.
+>
+> Hope this clarifies the behaviour.
+
+
+It does, thank you. (because I work with ClearCase, and never got the chance
+to play with UCM)
+
+Joel
+
+
+To sum it all up, Base ClearCase (which is what I mean by referring just to
+ClearCase) is lacking some features, for which UCM is there to complement.
+
+As UCM is part of the ClearCase distribution, it is appropriate to mention
+UCM features in place of ClearCase in the Comparison, but UCM streams are
+already mentioned there under Changesets' Support. Transactions in ClearCase
+(atomic commits) will address the issue of, as you described it, half done
+delivers. It must be agreed, then, that ClearCase supports neither
+transactions nor atomic commits.
+
+Hope I explained my point clearly.
+
+Amir
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/better-scm-discuss/attachments/20070317/24c9773b/attachment.html>
+
+From yxejamir at gmail.com  Sat Mar 17 01:04:44 2007
+From: yxejamir at gmail.com (Amir Yalon)
+Date: Sat, 17 Mar 2007 02:04:44 +0200
+Subject: ClearCase does not support atomic commits
+In-Reply-To: <3db8bf0a0703161057g248187d2s412be59398e6c7d2@mail.gmail.com>
+References: <3db8bf0a0703161057g248187d2s412be59398e6c7d2@mail.gmail.com>
+Message-ID: <3db8bf0a0703161704h398cf713o899ed4ab3e26c2d6@mail.gmail.com>
+
+I double checked my records now. There are no future plans for transaction
+support in ClearCase, as far as I can tell. If I get any update on the
+subject, I will let you know.
+
+Amir
+
+2007/3/16, Amir Yalon <yxejamir at gmail.com>:
+>
+> Hello Shlomi and mailing list readers,
+>
+> I am using ClearCase, and would be very happy to know if atomic
+> commits were part of the product. They are not.
+>
+> Attached, is a patch to the Comparison ("atomic commits") which says
+> 'No. Each file is checked in seperately.' in ClearCase. I would say
+> that support for the feature is planned for future major versions, but
+> could not find any reference to confirm this. If any one finds such a
+> reference, or otherwise confirm my estimation, then you can use the
+> "future plans" patch.
+>
+> Regards,
+> Amir
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/better-scm-discuss/attachments/20070317/232fafe4/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: clearcase_atomic_commits.patch
+Type: text/x-patch
+Size: 695 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/better-scm-discuss/attachments/20070317/232fafe4/attachment.bin>
+

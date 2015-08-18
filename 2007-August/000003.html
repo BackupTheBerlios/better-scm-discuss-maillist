@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> Excluding locked files from commiting?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/better-scm-discuss/2007-August/index.html" >
+   <LINK REL="made" HREF="mailto:better-scm-discuss%40lists.berlios.de?Subject=Re%3A%20Excluding%20locked%20files%20from%20commiting%3F&In-Reply-To=%3C861313.93057.qm%40web23002.mail.ird.yahoo.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>Excluding locked files from commiting?</H1>
+    <B>Martin VH</B> 
+    <A HREF="mailto:better-scm-discuss%40lists.berlios.de?Subject=Re%3A%20Excluding%20locked%20files%20from%20commiting%3F&In-Reply-To=%3C861313.93057.qm%40web23002.mail.ird.yahoo.com%3E"
+       TITLE="Excluding locked files from commiting?">huette1337 at yahoo.de
+       </A><BR>
+    <I>Mon Aug 27 16:00:49 CEST 2007</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hey there! 
+We use SmartSVN and - sorry - i haven't read a lot of
+the help-files/manuals, cause i'm not a subversion- 
+admin and there's just one little thing i was told to
+find out: 
+
+Is there a way to tell any subversion-client not to
+try to commit locked files (if i commit a folder /
+multiple files)? 
+
+Why i wanna know: 
+Ressource-files in Delphi. 
+They change everytime a Delphi-project is opened, even
+if there are no deliberate/significant changes in them
+and so the repository grows unnecessarily (despite of
+delta-algorithm). 
+Putting them onto the &quot;Ignored Files&quot;-List is not a
+nice solution, cause programmers shouldn't have to
+copy them manually to their pcs, when they check out a
+project (...and the files are needed to compile a
+project). 
+So we locked all res-files 'by admin'. Now the files
+are copied to the local working copies and can't be
+commited back to the repository (that's what we want).
+Only when we know, that there are significant changes
+to a res-file, we unlock and commit it (which is very
+occasionally). 
+But that isn't a very nice solution, too. When a whole
+folder/project is commited, the process cancels, cause
+there are locked (res-)files in nearly every folder.
+That's an effect of the atomic-comits-feature and i
+think it's helpful in general. But in our case we
+don't want to commit atomic. We wan't to commit
+&quot;atomic, but without locked files&quot;.
+
+Excluding locked files from commiting in general would
+be a solution.
+Or maybe there's a different way in a different client
+to solve that problem?
+
+Thanks for listening! 
+
+Cheers, 
+
+Martin
+
+
+      Heute schon einen Blick in die Zukunft von E-Mails wagen? Versuchen Sie&#180;s mit dem neuen Yahoo! Mail. www.yahoo.de/mail
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/better-scm-discuss">More information about the Better-scm-discuss
+mailing list</a><br>
+</body></html>

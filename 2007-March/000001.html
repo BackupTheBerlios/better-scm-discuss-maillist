@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> ClearCase does not support atomic commits
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/better-scm-discuss/2007-March/index.html" >
+   <LINK REL="made" HREF="mailto:better-scm-discuss%40lists.berlios.de?Subject=Re%3A%20ClearCase%20does%20not%20support%20atomic%20commits&In-Reply-To=%3C3db8bf0a0703161658r7482a2b2v448f2f3f988de9c2%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000000.html">
+   <LINK REL="Next"  HREF="000002.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>ClearCase does not support atomic commits</H1>
+    <B>Amir Yalon</B> 
+    <A HREF="mailto:better-scm-discuss%40lists.berlios.de?Subject=Re%3A%20ClearCase%20does%20not%20support%20atomic%20commits&In-Reply-To=%3C3db8bf0a0703161658r7482a2b2v448f2f3f988de9c2%40mail.gmail.com%3E"
+       TITLE="ClearCase does not support atomic commits">yxejamir at gmail.com
+       </A><BR>
+    <I>Sat Mar 17 00:58:59 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000000.html">ClearCase does not support atomic commits
+</A></li>
+        <LI>Next message: <A HREF="000002.html">ClearCase does not support atomic commits
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Joel,
+
+2007/3/16, Joel Crisp &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/better-scm-discuss">jcrisp at s-r-s.co.uk</A>&gt;:
+&gt;<i>
+</I>&gt;<i> Hi
+</I>&gt;<i>
+</I>&gt;<i> It depends on exactly what you mean by atomic commits.
+</I>&gt;<i>
+</I>&gt;<i> Clearcase has two main 'flavours', base Clearcase and Clearcase UCM.
+</I>&gt;<i> With base clearcase all checkin/merge operations are discrete and only
+</I>&gt;<i> file atomic (although there is the merge manager to help you organise
+</I>&gt;<i> merging multiple files).
+</I>&gt;<i>
+</I>&gt;<i> With streamed development under UCM, individual files can be checked
+</I>&gt;<i> in/out on a stream discretely, however delivery (merging from a
+</I>&gt;<i> development stream to the mainline or another integration stream) is a
+</I>&gt;<i> changeset based operation and is changeset atomic. In practice, UCM is
+</I>&gt;<i> a layer on top of base clearcase and so you may find that sometimes
+</I>&gt;<i> this atomicity can fail and leave a deliver operation half done. The
+</I>&gt;<i> good news is this is easy for a clearcase admin to fix.
+</I>&gt;<i>
+</I>&gt;<i> Hope this clarifies the behaviour.
+</I>
+
+It does, thank you. (because I work with ClearCase, and never got the chance
+to play with UCM)
+
+Joel
+
+
+To sum it all up, Base ClearCase (which is what I mean by referring just to
+ClearCase) is lacking some features, for which UCM is there to complement.
+
+As UCM is part of the ClearCase distribution, it is appropriate to mention
+UCM features in place of ClearCase in the Comparison, but UCM streams are
+already mentioned there under Changesets' Support. Transactions in ClearCase
+(atomic commits) will address the issue of, as you described it, half done
+delivers. It must be agreed, then, that ClearCase supports neither
+transactions nor atomic commits.
+
+Hope I explained my point clearly.
+
+Amir
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/better-scm-discuss/attachments/20070317/24c9773b/attachment.html">https://lists.berlios.de/pipermail/better-scm-discuss/attachments/20070317/24c9773b/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000000.html">ClearCase does not support atomic commits
+</A></li>
+	<LI>Next message: <A HREF="000002.html">ClearCase does not support atomic commits
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/better-scm-discuss">More information about the Better-scm-discuss
+mailing list</a><br>
+</body></html>
